@@ -17,7 +17,7 @@ node{
    stage('Build Docker Imager'){
    sh 'docker build -t vijay050996/myweb:0.0.2 .'
    }
-   stage('Docker Image Push'){
+   stage('Docker Image'){
    withCredentials([string(credentialsId: 'dockerPass', variable: 'dockerPassword')]) {
    sh "docker login -u vijay050996 -p ${dockerPassword}"
     }
