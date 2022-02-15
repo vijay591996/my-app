@@ -28,7 +28,7 @@ node{
    sh "docker tag vijay050996/myweb:0.0.2 3.16.55.131:8083/vijay:1.0.0"
    sh 'docker push 3.16.55.131:8083/vijay:1.0.0'
    }
-   stage('Remove Previous Container'){
+	stage('Remove Previous Container'){}
 	try{
 		sh 'docker rm -f tomcattest'
 	}catch(error){
